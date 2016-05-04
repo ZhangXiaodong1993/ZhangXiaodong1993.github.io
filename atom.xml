@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-04T02:52:31.000Z</updated>
+  <updated>2016-05-04T02:54:30.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/05/04/2016-05-04/"/>
     <id>http://yoursite.com/2016/05/04/2016-05-04/</id>
     <published>2016-05-03T16:33:42.000Z</published>
-    <updated>2016-05-04T02:52:31.000Z</updated>
+    <updated>2016-05-04T02:54:30.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;花了2晚的时间终于把博客较为完善的搭建起来了。&lt;/p&gt;
@@ -44,6 +44,7 @@
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;还有的问题&quot;&gt;&lt;a href=&quot;#还有的问题&quot; class=&quot;headerlink&quot; title=&quot;还有的问题&quot;&gt;&lt;/a&gt;还有的问题&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;目前搜索功能不好用&lt;/li&gt;
+&lt;li&gt;若要评论，登录之后需要刷新页面&lt;/li&gt;
 &lt;li&gt;没有单独分类的功能，例如我想在最上部分设置一个按钮，是单独的一个分类，例如技术，点击显示所有的技术文章。目前没见到有这样使用的，如 &lt;a href=&quot;http://wdxtub.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小土刀博客&lt;/a&gt; ，虽然有此分类，但明显是markdown写的文章索引。想实现的是类似 &lt;a href=&quot;http://blog.ibireme.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ibireme博客&lt;/a&gt; 的单独分类功能。正在寻求方法，或者说换一个博客引擎。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
