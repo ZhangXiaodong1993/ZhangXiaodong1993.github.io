@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-04T00:39:31.000Z</updated>
+  <updated>2016-05-04T02:48:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>麻雀虽小，五脏俱全</title>
-    <link href="http://yoursite.com/2016/05/04/title/"/>
-    <id>http://yoursite.com/2016/05/04/title/</id>
+    <link href="http://yoursite.com/2016/05/04/2016-05-04/"/>
+    <id>http://yoursite.com/2016/05/04/2016-05-04/</id>
     <published>2016-05-03T16:33:42.000Z</published>
-    <updated>2016-05-04T00:39:31.000Z</updated>
+    <updated>2016-05-04T02:48:31.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;花了2晚的时间终于把博客较为完善的搭建起来了。&lt;/p&gt;
@@ -41,6 +41,11 @@
 &lt;blockquote&gt;
 &lt;p&gt;感谢以上作者，为我们提供的所有帮助。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;还有的问题&quot;&gt;&lt;a href=&quot;#还有的问题&quot; class=&quot;headerlink&quot; title=&quot;还有的问题&quot;&gt;&lt;/a&gt;还有的问题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;目前搜索功能不好用&lt;/li&gt;
+&lt;li&gt;没有单独分类的功能，例如我想在最上部分设置一个按钮，是单独的一个分类，例如技术，点击显示所有的技术文章。目前没见到有这样使用的，如 &lt;a href=&quot;http://wdxtub.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小土刀博客&lt;/a&gt; ，虽然有此分类，但明显是markdown写的文章索引。想实现的是类似 &lt;a href=&quot;http://blog.ibireme.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ibireme博客&lt;/a&gt; 的单独分类功能。正在寻求方法，或者说换一个博客引擎。&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -49,7 +54,21 @@
 &lt;p&gt;花了2晚的时间终于把博客较为完善的搭建起来了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot; title=&quot;参考链接&quot;&gt;&lt;/a&gt;参考链接&lt;/h1&gt;&lt;ul&gt;
-&lt;l
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0&quot;&gt;Hexo+Next部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/index.html&quot;&gt;Hexo文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://theme-next.iissnan.com/getting-started.html&quot;&gt;Next文档&lt;/a&gt;(用处很大)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/1e402922ee32/&quot;&gt;MarkDown语法简要版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;里面的坑&quot;&gt;&lt;a href=&quot;#里面的坑&quot; class=&quot;headerlink&quot; title=&quot;里面的坑&quot;&gt;&lt;/a&gt;里面的坑&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Hexo安装指令前 + sudo，不然会说没权限&lt;/li&gt;
+&lt;li&gt;部署到github，域名与github账号名要一致&lt;/li&gt;
+&lt;li&gt;站点配置文件，url不要动，不要学第一篇文中所写，不要js会失效而报错&lt;/li&gt;
+&lt;li&gt;统计阅读量，创建class需要全部权限，其页面已改版，跟文中不一致&lt;/li&gt;
+&lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感谢以上作者，为我们提供的所有帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
