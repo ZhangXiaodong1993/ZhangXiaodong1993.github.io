@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-04T02:48:31.000Z</updated>
+  <updated>2016-05-04T02:52:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>麻雀虽小，五脏俱全</title>
+    <title>麻雀虽小，五脏也全</title>
     <link href="http://yoursite.com/2016/05/04/2016-05-04/"/>
     <id>http://yoursite.com/2016/05/04/2016-05-04/</id>
     <published>2016-05-03T16:33:42.000Z</published>
-    <updated>2016-05-04T02:48:31.000Z</updated>
+    <updated>2016-05-04T02:52:31.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;花了2晚的时间终于把博客较为完善的搭建起来了。&lt;/p&gt;
@@ -39,7 +39,7 @@
 &lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;感谢以上作者，为我们提供的所有帮助。&lt;/p&gt;
+&lt;p&gt;感谢以上作者，为我提供的所有帮助。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;还有的问题&quot;&gt;&lt;a href=&quot;#还有的问题&quot; class=&quot;headerlink&quot; title=&quot;还有的问题&quot;&gt;&lt;/a&gt;还有的问题&lt;/h1&gt;&lt;ul&gt;
@@ -67,7 +67,7 @@
 &lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;感谢以上作者，为我们提供的所有帮助。&lt;/p&gt;
+&lt;p&gt;感谢以上作者，为我提供的所有帮助。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
