@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-04T15:09:26.000Z</updated>
+  <updated>2016-05-04T15:12:14.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,14 @@
     <link href="http://yoursite.com/2016/05/04/blog/"/>
     <id>http://yoursite.com/2016/05/04/blog/</id>
     <published>2016-05-04T13:30:07.000Z</published>
-    <updated>2016-05-04T15:09:26.000Z</updated>
+    <updated>2016-05-04T15:12:14.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;央视新闻&lt;/strong&gt; 说&lt;code&gt;青年节&lt;/code&gt;放半天假，而且说了&lt;em&gt;14-28&lt;/em&gt;周岁都放假，但是跟我们都没有关系。&lt;br&gt;&lt;code&gt;51&lt;/code&gt;回来之后事情好多，有点忙不过来。在&lt;code&gt;淘宝&lt;/code&gt;淘了些东西，完全是受&lt;code&gt;知乎&lt;/code&gt;的影响。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;对于此博客&quot;&gt;&lt;a href=&quot;#对于此博客&quot; class=&quot;headerlink&quot; title=&quot;对于此博客&quot;&gt;&lt;/a&gt;对于此博客&lt;/h3&gt;&lt;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于此博客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
 &lt;li&gt;搭建并完善&lt;/li&gt;
 &lt;li&gt;将作为私人博客，记录生活、学习、感悟&lt;/li&gt;
 &lt;li&gt;将其它地方的文章或者博客迁移过来&lt;/li&gt;
@@ -44,6 +47,7 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;台灯&lt;/strong&gt;&lt;br&gt;省电护眼用的，当初来住的时候，匆忙就决定了，桌子不舒服，凳子不舒服。想要自己添置，空间又太小。打算等房东装修好4楼，上去住了，房子一定要大一些才行。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;blockquote&gt;
 &lt;p&gt;所思与所想&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -55,7 +59,31 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;央视新闻&lt;/strong&gt; 说&lt;code&gt;青年节&lt;/code&gt;放半天假，而且说了&lt;em&gt;14-28&lt;/em&gt;周岁都放假，但是跟我们都没有关系。&lt;br&gt;&lt;code&gt;51&lt;/code&gt;回来之后事情好多，有点忙不过来。在&lt;code&gt;淘宝&lt;/code&gt;淘了些东西，完
+      &lt;p&gt;&lt;strong&gt;央视新闻&lt;/strong&gt; 说&lt;code&gt;青年节&lt;/code&gt;放半天假，而且说了&lt;em&gt;14-28&lt;/em&gt;周岁都放假，但是跟我们都没有关系。&lt;br&gt;&lt;code&gt;51&lt;/code&gt;回来之后事情好多，有点忙不过来。在&lt;code&gt;淘宝&lt;/code&gt;淘了些东西，完全是受&lt;code&gt;知乎&lt;/code&gt;的影响。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于此博客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;搭建并完善&lt;/li&gt;
+&lt;li&gt;将作为私人博客，记录生活、学习、感悟&lt;/li&gt;
+&lt;li&gt;将其它地方的文章或者博客迁移过来&lt;/li&gt;
+&lt;li&gt;买一个独立域名   &lt;/li&gt;
+&lt;li&gt;还是不太喜欢这种样子的博客，以后有空会尝试建立自己喜欢的样子的博客&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;淘宝&lt;/code&gt;购物清单&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;桌上书架&lt;/strong&gt;&lt;br&gt;很笨重，益乐新村快递站点真是少，就几个通，韵达，天天等有站点。他们给我用的宅急送，真是醉了。然后送到公司，拖回来感觉手臂都不是我的了，几公斤重啊！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;鞋架&lt;/strong&gt;&lt;br&gt;现在&lt;code&gt;淘宝&lt;/code&gt;卖的都是有遮尘布的,挺好的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;脏衣袋&lt;/strong&gt;&lt;br&gt;感觉会实用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;台灯&lt;/strong&gt;&lt;br&gt;省电护眼用的，当初来住的时候，匆忙就决定了，桌子不舒服，凳子不舒服。想要自己添置，空间又太小。打算等房东装修好4楼，上去住了，房子一定要大一些才行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
