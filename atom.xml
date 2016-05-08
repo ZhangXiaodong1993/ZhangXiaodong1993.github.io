@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ZhangXiaodong1993.github.io/"/>
-  <updated>2016-05-08T09:14:48.000Z</updated>
+  <updated>2016-05-08T09:18:17.000Z</updated>
   <id>https://ZhangXiaodong1993.github.io/</id>
   
   <author>
@@ -20,68 +20,28 @@
     <link href="https://ZhangXiaodong1993.github.io/2016/05/08/2016shudan/"/>
     <id>https://ZhangXiaodong1993.github.io/2016/05/08/2016shudan/</id>
     <published>2016-05-08T09:13:15.000Z</published>
-    <updated>2016-05-08T09:14:48.000Z</updated>
+    <updated>2016-05-08T09:18:17.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;2015&quot;&gt;&lt;a href=&quot;#2015&quot; class=&quot;headerlink&quot; title=&quot;2015&quot;&gt;&lt;/a&gt;2015&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;你的孤独 虽败犹荣&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;刘同&lt;/code&gt;&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;2015&quot;&gt;&lt;a href=&quot;#2015&quot; class=&quot;headerlink&quot; title=&quot;2015&quot;&gt;&lt;/a&gt;2015&lt;/h2&gt;&lt;h4 id=&quot;你的孤独-虽败犹荣&quot;&gt;&lt;a href=&quot;#你的孤独-虽败犹荣&quot; class=&quot;headerlink&quot; title=&quot;你的孤独 虽败犹荣&quot;&gt;&lt;/a&gt;你的孤独 虽败犹荣&lt;/h4&gt;&lt;p&gt;&lt;code&gt;刘同&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;畅销书，讲述作者从湖南师范大学毕业10年的一些感悟，偏向于励志，文艺风格。读完只是感受到作者一路走来的心路历程(成功的历程)，于我作用不大。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Effective Objective-C 2.0 编写高质量iOS与OS X代码的52个有效方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;读的第一本技术书，质量挺高的一本书，读完收货颇多。对于代码风格，疑难点讲解很多，必读书籍。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Swifter 100个Swift开发必备Tip&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;王巍&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Effective-Objective-C-2-0-编写高质量iOS与OS-X代码的52个有效方法&quot;&gt;&lt;a href=&quot;#Effective-Objective-C-2-0-编写高质量iOS与OS-X代码的52个有效方法&quot; class=&quot;headerlink&quot; title=&quot;Effective Objective-C 2.0 编写高质量iOS与OS X代码的52个有效方法&quot;&gt;&lt;/a&gt;Effective Objective-C 2.0 编写高质量iOS与OS X代码的52个有效方法&lt;/h4&gt;&lt;p&gt;读的第一本技术书，质量挺高的一本书，读完收货颇多。对于代码风格，疑难点讲解很多，必读书籍。&lt;/p&gt;
+&lt;h4 id=&quot;Swifter-100个Swift开发必备Tip&quot;&gt;&lt;a href=&quot;#Swifter-100个Swift开发必备Tip&quot; class=&quot;headerlink&quot; title=&quot;Swifter 100个Swift开发必备Tip&quot;&gt;&lt;/a&gt;Swifter 100个Swift开发必备Tip&lt;/h4&gt;&lt;p&gt;&lt;code&gt;王巍&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;swift书籍，作者毕业于清华，现于就职于日本LINE公司。LINE，日本版微信，在日韩、台湾、东南亚、美国用户群体较多。&lt;br&gt;目前还没有学习swift，暂时搁置。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;图解TCP/IP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;日本人写的书，一般都有易于理解，通俗的特点。看了一般，图文并茂。很生动形象。&lt;/p&gt;
-&lt;h3 id=&quot;2016&quot;&gt;&lt;a href=&quot;#2016&quot; class=&quot;headerlink&quot; title=&quot;2016&quot;&gt;&lt;/a&gt;2016&lt;/h3&gt;&lt;h4 id=&quot;4月&quot;&gt;&lt;a href=&quot;#4月&quot; class=&quot;headerlink&quot; title=&quot;4月&quot;&gt;&lt;/a&gt;4月&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;草房子&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;曹文轩&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;图解TCP-IP&quot;&gt;&lt;a href=&quot;#图解TCP-IP&quot; class=&quot;headerlink&quot; title=&quot;图解TCP/IP&quot;&gt;&lt;/a&gt;图解TCP/IP&lt;/h4&gt;&lt;p&gt;日本人写的书，一般都有易于理解，通俗的特点。看了一般，图文并茂。很生动形象。&lt;/p&gt;
+&lt;h2 id=&quot;2016&quot;&gt;&lt;a href=&quot;#2016&quot; class=&quot;headerlink&quot; title=&quot;2016&quot;&gt;&lt;/a&gt;2016&lt;/h2&gt;&lt;h3 id=&quot;4月&quot;&gt;&lt;a href=&quot;#4月&quot; class=&quot;headerlink&quot; title=&quot;4月&quot;&gt;&lt;/a&gt;4月&lt;/h3&gt;&lt;h4 id=&quot;草房子&quot;&gt;&lt;a href=&quot;#草房子&quot; class=&quot;headerlink&quot; title=&quot;草房子&quot;&gt;&lt;/a&gt;草房子&lt;/h4&gt;&lt;p&gt;&lt;code&gt;曹文轩&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;作者安徒生奖得主，入选中学语文课文。儿童文学。看过电影，中学时代见同桌读过，也给我推荐过。至今才读，文字唯美，呼唤起童年回忆，可以净化心灵，使人安静下来。值得一读。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;番茄工作法图解&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;买来稍微翻阅了一下，没看下去，大概就是讲时间管理，高效工作。但这种事情实施起来很难啊。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;iOS 编程 第4版&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;好书，打基础必备。虽是入门书籍，多读几遍，每次都能有一些收获。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Objective-C高级编程 iOS与OS X多线程和内存管理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;日本人写的，主要讲ARC、block、GCD的，还没读完，好书&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AV Foundation 开发秘籍&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;还没读&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;iOS 编程实战 （iOS7）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;还没读&lt;/p&gt;
-&lt;h4 id=&quot;5月&quot;&gt;&lt;a href=&quot;#5月&quot; class=&quot;headerlink&quot; title=&quot;5月&quot;&gt;&lt;/a&gt;5月&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;岛上书店&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;畅销书，还没读&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Python绝技 运用Python成为顶级黑客&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;还没读&lt;/p&gt;
+&lt;h4 id=&quot;番茄工作法图解&quot;&gt;&lt;a href=&quot;#番茄工作法图解&quot; class=&quot;headerlink&quot; title=&quot;番茄工作法图解&quot;&gt;&lt;/a&gt;番茄工作法图解&lt;/h4&gt;&lt;p&gt;买来稍微翻阅了一下，没看下去，大概就是讲时间管理，高效工作。但这种事情实施起来很难啊。&lt;/p&gt;
+&lt;h4 id=&quot;iOS-编程-第4版&quot;&gt;&lt;a href=&quot;#iOS-编程-第4版&quot; class=&quot;headerlink&quot; title=&quot;iOS 编程 第4版&quot;&gt;&lt;/a&gt;iOS 编程 第4版&lt;/h4&gt;&lt;p&gt;好书，打基础必备。虽是入门书籍，多读几遍，每次都能有一些收获。&lt;/p&gt;
+&lt;h4 id=&quot;Objective-C高级编程-iOS与OS-X多线程和内存管理&quot;&gt;&lt;a href=&quot;#Objective-C高级编程-iOS与OS-X多线程和内存管理&quot; class=&quot;headerlink&quot; title=&quot;Objective-C高级编程 iOS与OS X多线程和内存管理&quot;&gt;&lt;/a&gt;Objective-C高级编程 iOS与OS X多线程和内存管理&lt;/h4&gt;&lt;p&gt;日本人写的，主要讲ARC、block、GCD的，还没读完，好书&lt;/p&gt;
+&lt;h4 id=&quot;AV-Foundation-开发秘籍&quot;&gt;&lt;a href=&quot;#AV-Foundation-开发秘籍&quot; class=&quot;headerlink&quot; title=&quot;AV Foundation 开发秘籍&quot;&gt;&lt;/a&gt;AV Foundation 开发秘籍&lt;/h4&gt;&lt;p&gt;还没读&lt;/p&gt;
+&lt;h4 id=&quot;iOS-编程实战-（iOS7）&quot;&gt;&lt;a href=&quot;#iOS-编程实战-（iOS7）&quot; class=&quot;headerlink&quot; title=&quot;iOS 编程实战 （iOS7）&quot;&gt;&lt;/a&gt;iOS 编程实战 （iOS7）&lt;/h4&gt;&lt;p&gt;还没读&lt;/p&gt;
+&lt;h3 id=&quot;5月&quot;&gt;&lt;a href=&quot;#5月&quot; class=&quot;headerlink&quot; title=&quot;5月&quot;&gt;&lt;/a&gt;5月&lt;/h3&gt;&lt;h4 id=&quot;岛上书店&quot;&gt;&lt;a href=&quot;#岛上书店&quot; class=&quot;headerlink&quot; title=&quot;岛上书店&quot;&gt;&lt;/a&gt;岛上书店&lt;/h4&gt;&lt;p&gt;畅销书，还没读&lt;/p&gt;
+&lt;h4 id=&quot;Python绝技-运用Python成为顶级黑客&quot;&gt;&lt;a href=&quot;#Python绝技-运用Python成为顶级黑客&quot; class=&quot;headerlink&quot; title=&quot;Python绝技 运用Python成为顶级黑客&quot;&gt;&lt;/a&gt;Python绝技 运用Python成为顶级黑客&lt;/h4&gt;&lt;p&gt;还没读&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;2015&quot;&gt;&lt;a href=&quot;#2015&quot; class=&quot;headerlink&quot; title=&quot;2015&quot;&gt;&lt;/a&gt;2015&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;你的孤独 虽败犹荣&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;刘同&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;畅销书，讲述作者从
+      &lt;h2 id=&quot;2015&quot;&gt;&lt;a href=&quot;#2015&quot; class=&quot;headerlink&quot; title=&quot;2015&quot;&gt;&lt;/a&gt;2015&lt;/h2&gt;&lt;h4 id=&quot;你的孤独-虽败犹荣&quot;&gt;&lt;a href=&quot;#你的孤独-虽败犹荣&quot; class=&quot;headerlink&quot; title=
     
     </summary>
     
