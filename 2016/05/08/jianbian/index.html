@@ -98,7 +98,7 @@
 123456789101112//创建渐变层">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1305321-347d2c934be3f2fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1305321-5d92d283c15418cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-05-08T08:16:57.000Z">
+<meta property="og:updated_time" content="2016-05-08T08:19:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="渐变">
 <meta name="twitter:description" content="1.CAGradientLayer
@@ -373,6 +373,7 @@
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define MF_ColorFromHex(c) [UIColor colorWithRed:((c&gt;&gt;16)&amp;0xFF)/255.0f green:((c&gt;&gt;8)&amp;0xFF)/255.0f blue:(c&amp;0xFF)/255.0f alpha:1.0f]</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建渐变层并添加到view的图层</span></span><br><span class="line">    <span class="built_in">CAGradientLayer</span> *layer = [<span class="built_in">CAGradientLayer</span> layer];</span><br><span class="line">    layer.frame = <span class="keyword">self</span>.view.bounds;</span><br><span class="line">    [<span class="keyword">self</span>.view.layer addSublayer:layer];</span><br><span class="line"></span><br><span class="line">    <span class="comment">//渐变起始点结束点，使用单位坐标。左上角(0, 0) 右下角(1, 1)</span></span><br><span class="line">    layer.startPoint = <span class="built_in">CGPointMake</span>(<span class="number">0.5</span>, <span class="number">0</span>);</span><br><span class="line">    layer.endPoint = <span class="built_in">CGPointMake</span>(<span class="number">0.5</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="comment">//用来调整渐变空间,也是单位坐标，0.0开头，1.0结尾，描述了每种颜色在渐变线上的位置</span></span><br><span class="line">    layer.locations = @[@<span class="number">0.0</span>, @<span class="number">0.5</span>,@<span class="number">1.0</span>];</span><br><span class="line">    <span class="comment">//共有哪几种颜色，数组里面要求放CGColorRef objects，要和locations数量对应,如果不对应,就只能依少的来渐变，没有出现变空白的现象</span></span><br><span class="line">    layer.colors = @[(__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0x00ff00</span>).CGColor, (__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0x0000ff</span>).CGColor, (__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0xff0000</span>).CGColor];</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <ul>
 <li><strong>效果</strong></li>
 </ul>
