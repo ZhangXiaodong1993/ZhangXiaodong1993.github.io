@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ZhangXiaodong1993.github.io/"/>
-  <updated>2016-05-08T07:38:12.000Z</updated>
+  <updated>2016-05-08T07:55:07.000Z</updated>
   <id>https://ZhangXiaodong1993.github.io/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS通讯录 AddressBook框架</title>
+    <link href="https://ZhangXiaodong1993.github.io/2016/05/08/iOStongxunlu/"/>
+    <id>https://ZhangXiaodong1993.github.io/2016/05/08/iOStongxunlu/</id>
+    <published>2016-05-08T07:44:12.000Z</published>
+    <updated>2016-05-08T07:55:07.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;iOS通讯录框架有&lt;code&gt;AddressBook&lt;/code&gt;,&lt;code&gt;AddressBookUI&lt;/code&gt;,&lt;code&gt;Contacts&lt;/code&gt;,&lt;code&gt;ContactsUI&lt;/code&gt;.&lt;br&gt;&lt;code&gt;iOS9&lt;/code&gt; &lt;code&gt;AddressBook&lt;/code&gt;,&lt;code&gt;AddressBookUI&lt;/code&gt;不推荐使用了，用&lt;code&gt;Contacts&lt;/code&gt;,&lt;code&gt;ContactsUI&lt;/code&gt;代替。&lt;br&gt;如果项目支持到iOS8或以下，还是使用AddressBook,AddressBookUI。本篇只涉及AddressBook框架的4个类。&lt;br&gt;可以看到AddressBook包含内容如下图：&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1305321-02abe87c857dc8a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;授权&quot;&gt;&lt;a href=&quot;#授权&quot; class=&quot;headerlink&quot; title=&quot;授权&quot;&gt;&lt;/a&gt;授权&lt;/h3&gt;&lt;p&gt;首先导入头文件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;addressbook addressbook.h=&quot;&quot;&gt;```&lt;/addressbook&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;请求授权的代码&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果用户没决定过，请求授权&lt;br&gt;    if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined) {&lt;br&gt;        //创建通讯录&lt;br&gt;        ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);&lt;br&gt;        //请求授权&lt;br&gt;        ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error) {&lt;br&gt;            if (granted) {//请求授权页面用户同意授权&lt;br&gt;                //读取通讯录人员数量,此处不可使用上面请求授权的通讯录对象,会崩溃&lt;br&gt;                ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);&lt;br&gt;                //获取联系人数量&lt;br&gt;                CFIndex personCount = ABAddressBookGetPersonCount(addressBook);&lt;br&gt;                dispatch_async(dispatch_get_main_queue(), ^{&lt;br&gt;                    //xxx&lt;br&gt;                });&lt;br&gt;                CFRelease(addressBook);&lt;br&gt;            }&lt;br&gt;         CFRelease(addressBookRef);&lt;br&gt;//如果是已授权状态&lt;br&gt;    } else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized) {&lt;br&gt;        //创建通讯录&lt;br&gt;        //读取通讯录人员数量&lt;br&gt;        ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);&lt;br&gt;        CFIndex personCount = ABAddressBookGetPersonCount(addressBookRef);&lt;br&gt;        //xxx&lt;br&gt;        CFRelease(addressBookRef);&lt;br&gt;    } else {&lt;br&gt;        [self showAlertWithTitle:@”提醒” message:@”请在设置中打开通讯录授权”];&lt;br&gt;    }&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;授权状态一共有四个值，可以自己点击去头文件看一下。为什么release，`CoreFoundation`框架内存需要手动管理，遇到`create`，`copy`，`new`，`retain`都需要release。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 读取联系人信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;代码：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);&lt;br&gt;    //拿到所有联系人&lt;br&gt;    CFArrayRef peopleArray = ABAddressBookCopyArrayOfAllPeople(addressBook);&lt;br&gt;    //数组数量&lt;br&gt;    CFIndex peopleCount = CFArrayGetCount(peopleArray);&lt;br&gt;    for (int i = 0; i &amp;lt; peopleCount; i++) {&lt;br&gt;        //拿到一个人&lt;br&gt;        ABRecordRef person = CFArrayGetValueAtIndex(peopleArray, i);&lt;br&gt;        //拿到姓名&lt;br&gt;        //姓&lt;br&gt;        NSString &lt;em&gt;lastNameValue = (__bridge_transfer NSString &lt;/em&gt;)ABRecordCopyValue(person, kABPersonLastNameProperty);&lt;br&gt;        //名&lt;br&gt;        NSString &lt;em&gt;firstNameValue = (__bridge_transfer NSString &lt;/em&gt;)ABRecordCopyValue(person, kABPersonFirstNameProperty);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    //拿到多值电话
+    ABMultiValueRef phones = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    //多值数量
+    CFIndex phoneCount = ABMultiValueGetCount(phones);
+    for (int j = 0; j &amp;lt; phoneCount ; j++) {
+        //电话标签本地化(例如是住宅,工作等)
+        NSString *phoneLabel = (__bridge_transfer NSString *)ABAddressBookCopyLocalizedLabel(ABMultiValueCopyLabelAtIndex(phones, j));
+        //拿到标签下对应的电话号码
+        NSString *phoneValue = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(phones, j);
+    }
+    CFRelease(phones);
+
+    //邮箱多值
+    ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
+    CFIndex emailCount = ABMultiValueGetCount(emails);
+    for (int k = 0; k &amp;lt; emailCount; k++) {
+        NSString *emailLabel = (__bridge_transfer NSString *)ABAddressBookCopyLocalizedLabel(ABMultiValueCopyLabelAtIndex(emails, k));
+        NSString *emailValue = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(emails, k);
+    }
+    CFRelease(emails);
+}
+CFRelease(addressBook);
+CFRelease(peopleArray);
+&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;关于`__bridge_transfer`，是`桥接`的关键字之一，还有`__bridge_retained`和`__bridge`,可以自行搜索桥接如有不明白，关键的是转换对象所有权的问题。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 新增联系人&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);&lt;br&gt;    for (IABPerson &lt;em&gt;iPerson in array) {&lt;br&gt;        //创建一个联系人&lt;br&gt;        ABRecordRef person = ABPersonCreate();&lt;br&gt;        //新增姓名&lt;br&gt;        NSString &lt;/em&gt;Name = iPerson.Name;&lt;br&gt;        //转换为CFString&lt;br&gt;        CFStringRef lastName = (&lt;strong&gt;bridge_retained CFStringRef)Name;&lt;br&gt;        //设置属性&lt;br&gt;        ABRecordSetValue(person, kABPersonLastNameProperty, lastName, NULL);&lt;br&gt;        CFRelease(lastName);&lt;br&gt;        //新增电话&lt;br&gt;        ABMultiValueRef phones = ABMultiValueCreateMutable(kABMultiStringPropertyType);&lt;br&gt;            //手机标签设置值&lt;br&gt;            CFStringRef mobile = (&lt;/strong&gt;bridge_retained CFStringRef)iPerson.MobilePhone;&lt;br&gt;            ABMultiValueAddValueAndLabel(phones, mobile, kABPersonPhoneMobileLabel, NULL);&lt;br&gt;            CFRelease(mobile);&lt;br&gt;            //住宅标签设置值&lt;br&gt;            CFStringRef homeTel = (&lt;strong&gt;bridge_retained CFStringRef)iPerson.HomeTel;&lt;br&gt;            ABMultiValueAddValueAndLabel(phones, homeTel, kABHomeLabel, NULL);&lt;br&gt;            CFRelease(homeTel);&lt;br&gt;            //工作标签设置值&lt;br&gt;            CFStringRef workTel = (&lt;/strong&gt;bridge_retained CFStringRef)iPerson.WorkTel;&lt;br&gt;            ABMultiValueAddValueAndLabel(phones, workTel, kABWorkLabel, NULL);&lt;br&gt;            CFRelease(workTel);&lt;br&gt;            //其他标签设置值&lt;br&gt;            CFStringRef otherTel = (__bridge_retained CFStringRef)iPerson.OtherTel;&lt;br&gt;            ABMultiValueAddValueAndLabel(phones, otherTel, kABOtherLabel, NULL);&lt;br&gt;            CFRelease(otherTel);&lt;br&gt;        //为联系人的电话多值 设置值&lt;br&gt;        ABRecordSetValue(person, kABPersonPhoneProperty, phones, NULL);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    //新增邮箱
+    ABMultiValueRef emails = ABMultiValueCreateMutable(kABPersonEmailProperty);
+        //住宅邮箱设置值
+        CFStringRef email = (__bridge_retained CFStringRef)iPerson.Email;
+        ABMultiValueAddValueAndLabel(emails, email, kABHomeLabel, NULL);
+        CFRelease(email);
+    //为联系人添加邮箱多值
+    ABRecordSetValue(person, kABPersonEmailProperty, emails, NULL);
+    //给通讯录添加联系人
+    ABAddressBookAddRecord(addressBook, person, NULL);
+    CFRelease(person);
+    CFRelease(phones);
+    CFRelease(emails);
+}
+//保存通讯录，一定要保存
+ABAddressBookSave(addressBook, NULL);
+CFRelease(addressBook);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;这里有一点就是，电话下面的标签，如果你在电话属性下面找&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1305321-d63f2f7a132d012b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;有住宅，工作，其他，但都是传真。其实是在通用下面，因为邮箱也用得到这些标签。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1305321-3cc9654b34b9c417.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;3&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;iOS通讯录框架有&lt;code&gt;AddressBook&lt;/code&gt;,&lt;code&gt;AddressBookUI&lt;/code&gt;,&lt;code&gt;Con
+    
+    </summary>
+    
+      <category term="技术" scheme="https://ZhangXiaodong1993.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="iOS" scheme="https://ZhangXiaodong1993.github.io/tags/iOS/"/>
+    
+      <category term="AddressBook" scheme="https://ZhangXiaodong1993.github.io/tags/AddressBook/"/>
+    
+  </entry>
   
   <entry>
     <title>2015 in上海</title>

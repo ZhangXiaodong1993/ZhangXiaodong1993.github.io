@@ -280,6 +280,186 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/08/iOStongxunlu/" itemprop="url">
+                  iOS通讯录 AddressBook框架
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-08T15:44:12+08:00" content="2016-05-08">
+              2016-05-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/08/iOStongxunlu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/08/iOStongxunlu/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/08/iOStongxunlu/" class="leancloud_visitors" data-flag-title="iOS通讯录 AddressBook框架">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>iOS通讯录框架有<code>AddressBook</code>,<code>AddressBookUI</code>,<code>Contacts</code>,<code>ContactsUI</code>.<br><code>iOS9</code> <code>AddressBook</code>,<code>AddressBookUI</code>不推荐使用了，用<code>Contacts</code>,<code>ContactsUI</code>代替。<br>如果项目支持到iOS8或以下，还是使用AddressBook,AddressBookUI。本篇只涉及AddressBook框架的4个类。<br>可以看到AddressBook包含内容如下图：<br><img src="http://upload-images.jianshu.io/upload_images/1305321-02abe87c857dc8a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1"></p>
+<h3 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h3><p>首先导入头文件</p>
+<figure class="highlight plain"><figcaption><span><addressbook addressbook.h="">```</addressbook></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">请求授权的代码</span><br></pre></td></tr></table></figure>
+<p>如果用户没决定过，请求授权<br>    if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined) {<br>        //创建通讯录<br>        ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);<br>        //请求授权<br>        ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error) {<br>            if (granted) {//请求授权页面用户同意授权<br>                //读取通讯录人员数量,此处不可使用上面请求授权的通讯录对象,会崩溃<br>                ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);<br>                //获取联系人数量<br>                CFIndex personCount = ABAddressBookGetPersonCount(addressBook);<br>                dispatch_async(dispatch_get_main_queue(), ^{<br>                    //xxx<br>                });<br>                CFRelease(addressBook);<br>            }<br>         CFRelease(addressBookRef);<br>//如果是已授权状态<br>    } else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized) {<br>        //创建通讯录<br>        //读取通讯录人员数量<br>        ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);<br>        CFIndex personCount = ABAddressBookGetPersonCount(addressBookRef);<br>        //xxx<br>        CFRelease(addressBookRef);<br>    } else {<br>        [self showAlertWithTitle:@”提醒” message:@”请在设置中打开通讯录授权”];<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">授权状态一共有四个值，可以自己点击去头文件看一下。为什么release，`CoreFoundation`框架内存需要手动管理，遇到`create`，`copy`，`new`，`retain`都需要release。</span><br><span class="line"></span><br><span class="line">### 读取联系人信息</span><br><span class="line">代码：</span><br></pre></td></tr></table></figure></p>
+<p>ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);<br>    //拿到所有联系人<br>    CFArrayRef peopleArray = ABAddressBookCopyArrayOfAllPeople(addressBook);<br>    //数组数量<br>    CFIndex peopleCount = CFArrayGetCount(peopleArray);<br>    for (int i = 0; i &lt; peopleCount; i++) {<br>        //拿到一个人<br>        ABRecordRef person = CFArrayGetValueAtIndex(peopleArray, i);<br>        //拿到姓名<br>        //姓<br>        NSString <em>lastNameValue = (__bridge_transfer NSString </em>)ABRecordCopyValue(person, kABPersonLastNameProperty);<br>        //名<br>        NSString <em>firstNameValue = (__bridge_transfer NSString </em>)ABRecordCopyValue(person, kABPersonFirstNameProperty);</p>
+<pre><code>    //拿到多值电话
+    ABMultiValueRef phones = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    //多值数量
+    CFIndex phoneCount = ABMultiValueGetCount(phones);
+    for (int j = 0; j &lt; phoneCount ; j++) {
+        //电话标签本地化(例如是住宅,工作等)
+        NSString *phoneLabel = (__bridge_transfer NSString *)ABAddressBookCopyLocalizedLabel(ABMultiValueCopyLabelAtIndex(phones, j));
+        //拿到标签下对应的电话号码
+        NSString *phoneValue = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(phones, j);
+    }
+    CFRelease(phones);
+
+    //邮箱多值
+    ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
+    CFIndex emailCount = ABMultiValueGetCount(emails);
+    for (int k = 0; k &lt; emailCount; k++) {
+        NSString *emailLabel = (__bridge_transfer NSString *)ABAddressBookCopyLocalizedLabel(ABMultiValueCopyLabelAtIndex(emails, k));
+        NSString *emailValue = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(emails, k);
+    }
+    CFRelease(emails);
+}
+CFRelease(addressBook);
+CFRelease(peopleArray);
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">关于`__bridge_transfer`，是`桥接`的关键字之一，还有`__bridge_retained`和`__bridge`,可以自行搜索桥接如有不明白，关键的是转换对象所有权的问题。</span><br><span class="line"></span><br><span class="line">### 新增联系人</span><br></pre></td></tr></table></figure>
+<p>ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);<br>    for (IABPerson <em>iPerson in array) {<br>        //创建一个联系人<br>        ABRecordRef person = ABPersonCreate();<br>        //新增姓名<br>        NSString </em>Name = iPerson.Name;<br>        //转换为CFString<br>        CFStringRef lastName = (<strong>bridge_retained CFStringRef)Name;<br>        //设置属性<br>        ABRecordSetValue(person, kABPersonLastNameProperty, lastName, NULL);<br>        CFRelease(lastName);<br>        //新增电话<br>        ABMultiValueRef phones = ABMultiValueCreateMutable(kABMultiStringPropertyType);<br>            //手机标签设置值<br>            CFStringRef mobile = (</strong>bridge_retained CFStringRef)iPerson.MobilePhone;<br>            ABMultiValueAddValueAndLabel(phones, mobile, kABPersonPhoneMobileLabel, NULL);<br>            CFRelease(mobile);<br>            //住宅标签设置值<br>            CFStringRef homeTel = (<strong>bridge_retained CFStringRef)iPerson.HomeTel;<br>            ABMultiValueAddValueAndLabel(phones, homeTel, kABHomeLabel, NULL);<br>            CFRelease(homeTel);<br>            //工作标签设置值<br>            CFStringRef workTel = (</strong>bridge_retained CFStringRef)iPerson.WorkTel;<br>            ABMultiValueAddValueAndLabel(phones, workTel, kABWorkLabel, NULL);<br>            CFRelease(workTel);<br>            //其他标签设置值<br>            CFStringRef otherTel = (__bridge_retained CFStringRef)iPerson.OtherTel;<br>            ABMultiValueAddValueAndLabel(phones, otherTel, kABOtherLabel, NULL);<br>            CFRelease(otherTel);<br>        //为联系人的电话多值 设置值<br>        ABRecordSetValue(person, kABPersonPhoneProperty, phones, NULL);</p>
+<pre><code>    //新增邮箱
+    ABMultiValueRef emails = ABMultiValueCreateMutable(kABPersonEmailProperty);
+        //住宅邮箱设置值
+        CFStringRef email = (__bridge_retained CFStringRef)iPerson.Email;
+        ABMultiValueAddValueAndLabel(emails, email, kABHomeLabel, NULL);
+        CFRelease(email);
+    //为联系人添加邮箱多值
+    ABRecordSetValue(person, kABPersonEmailProperty, emails, NULL);
+    //给通讯录添加联系人
+    ABAddressBookAddRecord(addressBook, person, NULL);
+    CFRelease(person);
+    CFRelease(phones);
+    CFRelease(emails);
+}
+//保存通讯录，一定要保存
+ABAddressBookSave(addressBook, NULL);
+CFRelease(addressBook);
+</code></pre><p>```</p>
+<p>这里有一点就是，电话下面的标签，如果你在电话属性下面找</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1305321-d63f2f7a132d012b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2"></p>
+<p>有住宅，工作，其他，但都是传真。其实是在通用下面，因为邮箱也用得到这些标签。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1305321-3cc9654b34b9c417.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3"></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/08/2015inshanghai/" itemprop="url">
                   2015 in上海
                 </a>
@@ -1030,7 +1210,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1047,7 +1227,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
