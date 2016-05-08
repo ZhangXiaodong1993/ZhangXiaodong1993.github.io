@@ -111,7 +111,7 @@
     <link href="https://ZhangXiaodong1993.github.io/2016/05/04/qingnianjie/"/>
     <id>https://ZhangXiaodong1993.github.io/2016/05/04/qingnianjie/</id>
     <published>2016-05-04T13:30:07.000Z</published>
-    <updated>2016-05-08T06:37:22.000Z</updated>
+    <updated>2016-05-08T07:05:53.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;央视新闻&lt;/strong&gt; 说&lt;code&gt;青年节&lt;/code&gt;放半天假，而且说了&lt;em&gt;14-28&lt;/em&gt;周岁都放假，但是跟我们都没有关系。&lt;br&gt;&lt;code&gt;51&lt;/code&gt;回来之后事情好多，有点忙不过来。在&lt;code&gt;淘宝&lt;/code&gt;淘了些东西，完全是受&lt;code&gt;知乎&lt;/code&gt;的影响。&lt;/p&gt;
 &lt;hr&gt;
@@ -139,6 +139,7 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;po几张图吧&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;img src=&quot;/upload/images/qingnianjie1.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;台灯原图&quot;&gt;
 &lt;img src=&quot;/upload/images/qingnianjie2.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;我的买家秀&quot;&gt;
 &lt;p&gt;&lt;strong&gt;差距略大&lt;/strong&gt;&lt;/p&gt;
@@ -146,7 +147,6 @@
 &lt;p&gt;&lt;strong&gt;感觉很棒，就是太重了，搬家的话恐怕不方便了，反正很便宜，到时候搬不动就丢掉&lt;/strong&gt;&lt;/p&gt;
 &lt;img src=&quot;/upload/images/qingnianjie5.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;鞋架与脏衣袋&quot;&gt;
 &lt;p&gt;&lt;strong&gt;很实用的&lt;/strong&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;blockquote&gt;
 &lt;p&gt;所思与所想&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -184,13 +184,6 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;po几张图吧&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;img src=&quot;/upload/images/qingnianjie1.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;台灯原图&quot; /&gt;
-&lt;img src=&quot;/upload/images/qingnianjie2.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;我的买家秀&quot; /&gt;
-&lt;p&gt;&lt;strong&gt;差距略大&lt;/strong&gt;&lt;/p&gt;
-&lt;img src=&quot;/upload/images/qingnianjie4.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;书架&quot; /&gt;
-&lt;p&gt;&lt;strong&gt;感觉很棒，就是太重了，搬家的话恐怕不方便了，反正很便宜，到时候搬不动就丢掉&lt;/strong&gt;&lt;/p&gt;
-&lt;img src=&quot;/upload/images/qingnianjie5.JPG&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;鞋架与脏衣袋&quot; /&gt;
-&lt;p&gt;&lt;strong&gt;很实用的&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -208,7 +201,7 @@
     <link href="https://ZhangXiaodong1993.github.io/2016/05/04/maque/"/>
     <id>https://ZhangXiaodong1993.github.io/2016/05/04/maque/</id>
     <published>2016-05-03T16:33:42.000Z</published>
-    <updated>2016-05-08T06:59:37.000Z</updated>
+    <updated>2016-05-08T07:05:07.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;花了2晚的时间终于把博客较为完善的搭建起来了。&lt;/p&gt;
@@ -225,7 +218,7 @@
 &lt;li&gt;站点配置文件，url不要动，不要学第一篇文中所写，不要js会失效而报错&lt;/li&gt;
 &lt;li&gt;统计阅读量，创建class需要全部权限，其页面已改版，跟文中不一致&lt;/li&gt;
 &lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
-&lt;li&gt;图片上传，markdown自带的格式并不好用，需要用到hexo文档中介绍的格式。&lt;img src=&quot;/upload/images/maque1.png&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;标题&quot;&gt;&lt;br&gt;&lt;code&gt;fi&lt;/code&gt;表示图片突出显示（会变大），Next文档有介绍。&lt;/li&gt;
+&lt;li&gt;图片上传，markdown自带的格式并不好用，需要用到hexo文档中介绍的格式。&lt;img src=&quot;/upload/images/maque1.png&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;标题&quot;&gt;&lt;br&gt;&lt;code&gt;fi&lt;/code&gt;表示图片突出显示（会变大），Next文档有介绍。其它样式参考hexo的文档。上传的图片尺寸不要太大，最好控制在1M以内（如果很大，自行压缩一下），这样打开的时候不会加载很慢。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;感谢以上作者，为我提供的所有帮助。&lt;/p&gt;
@@ -255,7 +248,7 @@
 &lt;li&gt;站点配置文件，url不要动，不要学第一篇文中所写，不要js会失效而报错&lt;/li&gt;
 &lt;li&gt;统计阅读量，创建class需要全部权限，其页面已改版，跟文中不一致&lt;/li&gt;
 &lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
-&lt;li&gt;图片上传，markdown自带的格式并不好用，需要用到hexo文档中介绍的格式。&lt;img src=&quot;/upload/images/maque1.png&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;标题&quot; /&gt;&lt;br&gt;&lt;code&gt;fi&lt;/code&gt;表示图片突出显示（会变大），Next文档有介绍。&lt;/li&gt;
+&lt;li&gt;图片上传，markdown自带的格式并不好用，需要用到hexo文档中介绍的格式。&lt;img src=&quot;/upload/images/maque1.png&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;标题&quot; /&gt;&lt;br&gt;&lt;code&gt;fi&lt;/code&gt;表示图片突出显示（会变大），Next文档有介绍。其它样式参考hexo的文档。上传的图片尺寸不要太大，最好控制在1M以内（如果很大，自行压缩一下），这样打开的时候不会加载很慢。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;感谢以上作者，为我提供的所有帮助。&lt;/p&gt;
