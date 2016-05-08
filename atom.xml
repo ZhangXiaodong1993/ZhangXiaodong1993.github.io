@@ -192,7 +192,7 @@
     <link href="https://ZhangXiaodong1993.github.io/2016/05/04/2016-05-04/"/>
     <id>https://ZhangXiaodong1993.github.io/2016/05/04/2016-05-04/</id>
     <published>2016-05-03T16:33:42.000Z</published>
-    <updated>2016-05-04T13:36:25.000Z</updated>
+    <updated>2016-05-08T04:27:43.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;花了2晚的时间终于把博客较为完善的搭建起来了。&lt;/p&gt;
@@ -209,6 +209,7 @@
 &lt;li&gt;站点配置文件，url不要动，不要学第一篇文中所写，不要js会失效而报错&lt;/li&gt;
 &lt;li&gt;统计阅读量，创建class需要全部权限，其页面已改版，跟文中不一致&lt;/li&gt;
 &lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
+&lt;li&gt;图片上传，markdown自带的格式并不好用，需要用到hexo文档中介绍的格式。&lt;code&gt;&lt;img src=&quot;/upload/images/gongqijun1.png&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;标题&quot;&gt;&lt;/code&gt;，&lt;code&gt;fi&lt;/code&gt;表示图片突出显示（会变大），Next文档有介绍。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;感谢以上作者，为我提供的所有帮助。&lt;/p&gt;
@@ -217,7 +218,7 @@
 &lt;h1 id=&quot;还有的问题&quot;&gt;&lt;a href=&quot;#还有的问题&quot; class=&quot;headerlink&quot; title=&quot;还有的问题&quot;&gt;&lt;/a&gt;还有的问题&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;目前搜索功能不好用&lt;/li&gt;
 &lt;li&gt;若要评论，登录之后需要刷新页面&lt;/li&gt;
-&lt;li&gt;没有单独分类的功能，例如我想在最上部分设置一个按钮，是单独的一个分类，例如技术，点击显示所有的技术文章。目前没见到有这样使用的，如 &lt;a href=&quot;http://wdxtub.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小土刀博客&lt;/a&gt; ，虽然有此分类，但明显是markdown写的文章索引。想实现的是类似 &lt;a href=&quot;http://blog.ibireme.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ibireme博客&lt;/a&gt; 的单独分类功能。正在寻求方法，或者说换一个博客引擎。&lt;/li&gt;
+&lt;li&gt;没有单独分类的功能，例如我想在最上部分设置一个按钮，是单独的一个分类，例如技术，点击显示所有的技术文章。目前没见到有这样使用的，如 &lt;a href=&quot;http://wdxtub.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小土刀博客&lt;/a&gt; ，虽然有此分类，但明显是markdown写的文章索引。想实现的是类似 &lt;a href=&quot;http://blog.ibireme.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ibireme博客&lt;/a&gt; 的单独分类功能。(目前已得知是用&lt;code&gt;WordPress&lt;/code&gt;搭建的)正在寻求方法，或者说换一个博客引擎。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
@@ -238,6 +239,7 @@
 &lt;li&gt;站点配置文件，url不要动，不要学第一篇文中所写，不要js会失效而报错&lt;/li&gt;
 &lt;li&gt;统计阅读量，创建class需要全部权限，其页面已改版，跟文中不一致&lt;/li&gt;
 &lt;li&gt;文件文件夹里面不要为空，不要也会导致js失效报错&lt;/li&gt;
+&lt;li&gt;图片上传，markdown自带的格式并不好用，需要用到hexo文档中介绍的格式。&lt;code&gt;&lt;img src=&quot;/upload/images/gongqijun1.png&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;标题&quot; /&gt;&lt;/code&gt;，&lt;code&gt;fi&lt;/code&gt;表示图片突出显示（会变大），Next文档有介绍。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;感谢以上作者，为我提供的所有帮助。&lt;/p&gt;
