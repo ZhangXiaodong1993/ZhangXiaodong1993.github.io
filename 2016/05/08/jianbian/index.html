@@ -83,29 +83,29 @@
 
 
 <meta name="description" content="1.CAGradientLayer
-代码
+&amp;#x4EE3;&amp;#x7801;
 
 1#define MF_ColorFromHex(c) [UIColor colorWithRed:((c&amp;gt;&amp;gt;16)&amp;amp;0xFF)/255.0f green:((c&amp;gt;&amp;gt;8)&amp;amp;0xFF)/255.0f blue:(c&amp;amp;0xFF)/255.0f alpha:1.0f]
-123456789101112//创建渐变层">
+12345678">
 <meta property="og:type" content="article">
 <meta property="og:title" content="渐变">
 <meta property="og:url" content="https://ZhangXiaodong1993.github.io/2016/05/08/jianbian/index.html">
 <meta property="og:site_name" content="地球屋敷">
 <meta property="og:description" content="1.CAGradientLayer
-代码
+&amp;#x4EE3;&amp;#x7801;
 
 1#define MF_ColorFromHex(c) [UIColor colorWithRed:((c&amp;gt;&amp;gt;16)&amp;amp;0xFF)/255.0f green:((c&amp;gt;&amp;gt;8)&amp;amp;0xFF)/255.0f blue:(c&amp;amp;0xFF)/255.0f alpha:1.0f]
-123456789101112//创建渐变层">
+12345678">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1305321-347d2c934be3f2fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1305321-5d92d283c15418cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:updated_time" content="2016-05-08T08:19:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="渐变">
 <meta name="twitter:description" content="1.CAGradientLayer
-代码
+&amp;#x4EE3;&amp;#x7801;
 
 1#define MF_ColorFromHex(c) [UIColor colorWithRed:((c&amp;gt;&amp;gt;16)&amp;amp;0xFF)/255.0f green:((c&amp;gt;&amp;gt;8)&amp;amp;0xFF)/255.0f blue:(c&amp;amp;0xFF)/255.0f alpha:1.0f]
-123456789101112//创建渐变层">
+12345678">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1305321-347d2c934be3f2fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -227,39 +227,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="#" class="st-search-show-outputs">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'jUpqs9hBG1gkgQU5hooM','2.0.0');
-</script>
-
-
-
-    </div>
   
 </nav>
 
@@ -369,31 +339,31 @@
 
       
         <h3 id="1-CAGradientLayer"><a href="#1-CAGradientLayer" class="headerlink" title="1.CAGradientLayer"></a>1.CAGradientLayer</h3><ul>
-<li><strong>代码</strong></li>
+<li><strong>&#x4EE3;&#x7801;</strong></li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define MF_ColorFromHex(c) [UIColor colorWithRed:((c&gt;&gt;16)&amp;0xFF)/255.0f green:((c&gt;&gt;8)&amp;0xFF)/255.0f blue:(c&amp;0xFF)/255.0f alpha:1.0f]</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建渐变层并添加到view的图层</span></span><br><span class="line">    <span class="built_in">CAGradientLayer</span> *layer = [<span class="built_in">CAGradientLayer</span> layer];</span><br><span class="line">    layer.frame = <span class="keyword">self</span>.view.bounds;</span><br><span class="line">    [<span class="keyword">self</span>.view.layer addSublayer:layer];</span><br><span class="line"></span><br><span class="line">    <span class="comment">//渐变起始点结束点，使用单位坐标。左上角(0, 0) 右下角(1, 1)</span></span><br><span class="line">    layer.startPoint = <span class="built_in">CGPointMake</span>(<span class="number">0.5</span>, <span class="number">0</span>);</span><br><span class="line">    layer.endPoint = <span class="built_in">CGPointMake</span>(<span class="number">0.5</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="comment">//用来调整渐变空间,也是单位坐标，0.0开头，1.0结尾，描述了每种颜色在渐变线上的位置</span></span><br><span class="line">    layer.locations = @[@<span class="number">0.0</span>, @<span class="number">0.5</span>,@<span class="number">1.0</span>];</span><br><span class="line">    <span class="comment">//共有哪几种颜色，数组里面要求放CGColorRef objects，要和locations数量对应,如果不对应,就只能依少的来渐变，没有出现变空白的现象</span></span><br><span class="line">    layer.colors = @[(__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0x00ff00</span>).CGColor, (__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0x0000ff</span>).CGColor, (__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0xff0000</span>).CGColor];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x521B;&#x5EFA;&#x6E10;&#x53D8;&#x5C42;&#x5E76;&#x6DFB;&#x52A0;&#x5230;view&#x7684;&#x56FE;&#x5C42;</span></span><br><span class="line">    <span class="built_in">CAGradientLayer</span> *layer = [<span class="built_in">CAGradientLayer</span> layer];</span><br><span class="line">    layer.frame = <span class="keyword">self</span>.view.bounds;</span><br><span class="line">    [<span class="keyword">self</span>.view.layer addSublayer:layer];</span><br><span class="line"></span><br><span class="line">    <span class="comment">//&#x6E10;&#x53D8;&#x8D77;&#x59CB;&#x70B9;&#x7ED3;&#x675F;&#x70B9;&#xFF0C;&#x4F7F;&#x7528;&#x5355;&#x4F4D;&#x5750;&#x6807;&#x3002;&#x5DE6;&#x4E0A;&#x89D2;(0, 0) &#x53F3;&#x4E0B;&#x89D2;(1, 1)</span></span><br><span class="line">    layer.startPoint = <span class="built_in">CGPointMake</span>(<span class="number">0.5</span>, <span class="number">0</span>);</span><br><span class="line">    layer.endPoint = <span class="built_in">CGPointMake</span>(<span class="number">0.5</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="comment">//&#x7528;&#x6765;&#x8C03;&#x6574;&#x6E10;&#x53D8;&#x7A7A;&#x95F4;,&#x4E5F;&#x662F;&#x5355;&#x4F4D;&#x5750;&#x6807;&#xFF0C;0.0&#x5F00;&#x5934;&#xFF0C;1.0&#x7ED3;&#x5C3E;&#xFF0C;&#x63CF;&#x8FF0;&#x4E86;&#x6BCF;&#x79CD;&#x989C;&#x8272;&#x5728;&#x6E10;&#x53D8;&#x7EBF;&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;</span></span><br><span class="line">    layer.locations = @[@<span class="number">0.0</span>, @<span class="number">0.5</span>,@<span class="number">1.0</span>];</span><br><span class="line">    <span class="comment">//&#x5171;&#x6709;&#x54EA;&#x51E0;&#x79CD;&#x989C;&#x8272;&#xFF0C;&#x6570;&#x7EC4;&#x91CC;&#x9762;&#x8981;&#x6C42;&#x653E;CGColorRef objects&#xFF0C;&#x8981;&#x548C;locations&#x6570;&#x91CF;&#x5BF9;&#x5E94;,&#x5982;&#x679C;&#x4E0D;&#x5BF9;&#x5E94;,&#x5C31;&#x53EA;&#x80FD;&#x4F9D;&#x5C11;&#x7684;&#x6765;&#x6E10;&#x53D8;&#xFF0C;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x53D8;&#x7A7A;&#x767D;&#x7684;&#x73B0;&#x8C61;</span></span><br><span class="line">    layer.colors = @[(__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0x00ff00</span>).CGColor, (__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0x0000ff</span>).CGColor, (__bridge <span class="keyword">id</span>)MF_ColorFromHex(<span class="number">0xff0000</span>).CGColor];</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <ul>
-<li><strong>效果</strong></li>
+<li><strong>&#x6548;&#x679C;</strong></li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/1305321-347d2c934be3f2fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1"></p>
 <ul>
-<li><strong>说明</strong></li>
+<li><strong>&#x8BF4;&#x660E;</strong></li>
 </ul>
-<p><code>CAGradientLayer</code>是<code>CALayer</code>的一个子类，专门处理渐变效果，gradient就是渐变的意思。如果只是两种颜色的渐变可以不设置<code>locations</code>属性。颜色是16位颜色，所以需要用位移和与运算操作转换一下。<br>实际上CAGradientLayer是对<code>Core Graphics</code>的封装，底部实现是使用Core Graphics绘制。说法来自于<a href="https://zsisme.gitbooks.io/ios-/content/chapter6/cagradientLayer.html" target="_blank" rel="external">iOS Core Animation Advanced Techniques 翻译版(ios核心动画高级技巧)</a>这本书。</p>
-<h3 id="2-Core-Graphics绘制渐变"><a href="#2-Core-Graphics绘制渐变" class="headerlink" title="2.Core Graphics绘制渐变"></a>2.Core Graphics绘制渐变</h3><ul>
-<li><strong>代码</strong></li>
+<p><code>CAGradientLayer</code>&#x662F;<code>CALayer</code>&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#xFF0C;&#x4E13;&#x95E8;&#x5904;&#x7406;&#x6E10;&#x53D8;&#x6548;&#x679C;&#xFF0C;gradient&#x5C31;&#x662F;&#x6E10;&#x53D8;&#x7684;&#x610F;&#x601D;&#x3002;&#x5982;&#x679C;&#x53EA;&#x662F;&#x4E24;&#x79CD;&#x989C;&#x8272;&#x7684;&#x6E10;&#x53D8;&#x53EF;&#x4EE5;&#x4E0D;&#x8BBE;&#x7F6E;<code>locations</code>&#x5C5E;&#x6027;&#x3002;&#x989C;&#x8272;&#x662F;16&#x4F4D;&#x989C;&#x8272;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x7528;&#x4F4D;&#x79FB;&#x548C;&#x4E0E;&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x8F6C;&#x6362;&#x4E00;&#x4E0B;&#x3002;<br>&#x5B9E;&#x9645;&#x4E0A;CAGradientLayer&#x662F;&#x5BF9;<code>Core Graphics</code>&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x5E95;&#x90E8;&#x5B9E;&#x73B0;&#x662F;&#x4F7F;&#x7528;Core Graphics&#x7ED8;&#x5236;&#x3002;&#x8BF4;&#x6CD5;&#x6765;&#x81EA;&#x4E8E;<a href="https://zsisme.gitbooks.io/ios-/content/chapter6/cagradientLayer.html" target="_blank" rel="external">iOS Core Animation Advanced Techniques &#x7FFB;&#x8BD1;&#x7248;(ios&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x9AD8;&#x7EA7;&#x6280;&#x5DE7;)</a>&#x8FD9;&#x672C;&#x4E66;&#x3002;</p>
+<h3 id="2-Core-Graphics&#x7ED8;&#x5236;&#x6E10;&#x53D8;"><a href="#2-Core-Graphics&#x7ED8;&#x5236;&#x6E10;&#x53D8;" class="headerlink" title="2.Core Graphics&#x7ED8;&#x5236;&#x6E10;&#x53D8;"></a>2.Core Graphics&#x7ED8;&#x5236;&#x6E10;&#x53D8;</h3><ul>
+<li><strong>&#x4EE3;&#x7801;</strong></li>
 </ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)drawRect:(<span class="built_in">CGRect</span>)rect &#123;</span><br><span class="line">    <span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</span><br><span class="line">    <span class="comment">//C浮点型数组，取值区间0到1，中间可以插值，如果起始点不是0，前面都是起始点的颜色，结尾同理</span></span><br><span class="line">    <span class="built_in">CGFloat</span> locations[<span class="number">3</span>] = &#123; <span class="number">0.0</span>, <span class="number">0.6</span>, <span class="number">1.0</span> &#125;;</span><br><span class="line">    <span class="comment">//RGBA颜色，4个代表一个颜色</span></span><br><span class="line">    <span class="built_in">CGFloat</span> components[<span class="number">12</span>] = &#123; <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,</span><br><span class="line">                               <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,</span><br><span class="line">                               <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span> &#125;;</span><br><span class="line">    <span class="comment">//色彩空间</span></span><br><span class="line">    <span class="built_in">CGColorSpaceRef</span> colorspace = <span class="built_in">CGColorSpaceCreateDeviceRGB</span>();</span><br><span class="line">    <span class="comment">//创建渐变，最后一个参数代表一共过渡几种颜色，与locations个数对应，小于，例如如果填了2只显示前两种颜色渐变，大于，例如填了4则什么都不显示了</span></span><br><span class="line">    <span class="built_in">CGGradientRef</span> gradient = <span class="built_in">CGGradientCreateWithColorComponents</span>(colorspace, components, locations, <span class="number">3</span>);</span><br><span class="line">    <span class="comment">//起始点</span></span><br><span class="line">    <span class="built_in">CGPoint</span> startPoint = <span class="built_in">CGPointMake</span>(rect.size.width/<span class="number">2</span>, <span class="number">200</span>);</span><br><span class="line">    <span class="built_in">CGPoint</span> endPoint = <span class="built_in">CGPointMake</span>(rect.size.width/<span class="number">2</span> , rect.size.height<span class="number">-200</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIBezierPath</span> *path = [<span class="built_in">UIBezierPath</span> bezierPath];</span><br><span class="line">    [path moveToPoint:startPoint];</span><br><span class="line">    [path addLineToPoint:<span class="built_in">CGPointMake</span>(rect.size.width<span class="number">-100</span>, rect.size.height<span class="number">-200</span>)];</span><br><span class="line">    [path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">100</span>, rect.size.height<span class="number">-200</span>)];</span><br><span class="line">    [path moveToPoint:startPoint];</span><br><span class="line">    <span class="comment">//保存绘制前状态，绘制之后无法删除</span></span><br><span class="line">    <span class="built_in">CGContextSaveGState</span>(context);</span><br><span class="line">    <span class="comment">//使用路径裁剪上下文</span></span><br><span class="line">    [path addClip];</span><br><span class="line">    <span class="comment">//绘制线性渐变，还有径向渐变，参数会是圆心，角度什么的。最后一个参数表示起始点之前或者终点之后的填充颜色会和起始点或终点一样</span></span><br><span class="line">    <span class="built_in">CGContextDrawLinearGradient</span>(context, gradient, startPoint, endPoint, k<span class="built_in">CGGradientDrawsBeforeStartLocation</span> | k<span class="built_in">CGGradientDrawsAfterEndLocation</span>);</span><br><span class="line">    <span class="comment">//恢复绘制前的上下文状态，现在的上下文不是裁剪的那块了</span></span><br><span class="line">    <span class="built_in">CGContextRestoreGState</span>(context);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGGradientRelease</span>(gradient);</span><br><span class="line">    <span class="built_in">CGColorSpaceRelease</span>(colorspace);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)drawRect:(<span class="built_in">CGRect</span>)rect {</span><br><span class="line">    <span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</span><br><span class="line">    <span class="comment">//C&#x6D6E;&#x70B9;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x53D6;&#x503C;&#x533A;&#x95F4;0&#x5230;1&#xFF0C;&#x4E2D;&#x95F4;&#x53EF;&#x4EE5;&#x63D2;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8D77;&#x59CB;&#x70B9;&#x4E0D;&#x662F;0&#xFF0C;&#x524D;&#x9762;&#x90FD;&#x662F;&#x8D77;&#x59CB;&#x70B9;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x7ED3;&#x5C3E;&#x540C;&#x7406;</span></span><br><span class="line">    <span class="built_in">CGFloat</span> locations[<span class="number">3</span>] = { <span class="number">0.0</span>, <span class="number">0.6</span>, <span class="number">1.0</span> };</span><br><span class="line">    <span class="comment">//RGBA&#x989C;&#x8272;&#xFF0C;4&#x4E2A;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x989C;&#x8272;</span></span><br><span class="line">    <span class="built_in">CGFloat</span> components[<span class="number">12</span>] = { <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,</span><br><span class="line">                               <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>,</span><br><span class="line">                               <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span> };</span><br><span class="line">    <span class="comment">//&#x8272;&#x5F69;&#x7A7A;&#x95F4;</span></span><br><span class="line">    <span class="built_in">CGColorSpaceRef</span> colorspace = <span class="built_in">CGColorSpaceCreateDeviceRGB</span>();</span><br><span class="line">    <span class="comment">//&#x521B;&#x5EFA;&#x6E10;&#x53D8;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4EE3;&#x8868;&#x4E00;&#x5171;&#x8FC7;&#x6E21;&#x51E0;&#x79CD;&#x989C;&#x8272;&#xFF0C;&#x4E0E;locations&#x4E2A;&#x6570;&#x5BF9;&#x5E94;&#xFF0C;&#x5C0F;&#x4E8E;&#xFF0C;&#x4F8B;&#x5982;&#x5982;&#x679C;&#x586B;&#x4E86;2&#x53EA;&#x663E;&#x793A;&#x524D;&#x4E24;&#x79CD;&#x989C;&#x8272;&#x6E10;&#x53D8;&#xFF0C;&#x5927;&#x4E8E;&#xFF0C;&#x4F8B;&#x5982;&#x586B;&#x4E86;4&#x5219;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x663E;&#x793A;&#x4E86;</span></span><br><span class="line">    <span class="built_in">CGGradientRef</span> gradient = <span class="built_in">CGGradientCreateWithColorComponents</span>(colorspace, components, locations, <span class="number">3</span>);</span><br><span class="line">    <span class="comment">//&#x8D77;&#x59CB;&#x70B9;</span></span><br><span class="line">    <span class="built_in">CGPoint</span> startPoint = <span class="built_in">CGPointMake</span>(rect.size.width/<span class="number">2</span>, <span class="number">200</span>);</span><br><span class="line">    <span class="built_in">CGPoint</span> endPoint = <span class="built_in">CGPointMake</span>(rect.size.width/<span class="number">2</span> , rect.size.height<span class="number">-200</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIBezierPath</span> *path = [<span class="built_in">UIBezierPath</span> bezierPath];</span><br><span class="line">    [path moveToPoint:startPoint];</span><br><span class="line">    [path addLineToPoint:<span class="built_in">CGPointMake</span>(rect.size.width<span class="number">-100</span>, rect.size.height<span class="number">-200</span>)];</span><br><span class="line">    [path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">100</span>, rect.size.height<span class="number">-200</span>)];</span><br><span class="line">    [path moveToPoint:startPoint];</span><br><span class="line">    <span class="comment">//&#x4FDD;&#x5B58;&#x7ED8;&#x5236;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x7ED8;&#x5236;&#x4E4B;&#x540E;&#x65E0;&#x6CD5;&#x5220;&#x9664;</span></span><br><span class="line">    <span class="built_in">CGContextSaveGState</span>(context);</span><br><span class="line">    <span class="comment">//&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x88C1;&#x526A;&#x4E0A;&#x4E0B;&#x6587;</span></span><br><span class="line">    [path addClip];</span><br><span class="line">    <span class="comment">//&#x7ED8;&#x5236;&#x7EBF;&#x6027;&#x6E10;&#x53D8;&#xFF0C;&#x8FD8;&#x6709;&#x5F84;&#x5411;&#x6E10;&#x53D8;&#xFF0C;&#x53C2;&#x6570;&#x4F1A;&#x662F;&#x5706;&#x5FC3;&#xFF0C;&#x89D2;&#x5EA6;&#x4EC0;&#x4E48;&#x7684;&#x3002;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x8D77;&#x59CB;&#x70B9;&#x4E4B;&#x524D;&#x6216;&#x8005;&#x7EC8;&#x70B9;&#x4E4B;&#x540E;&#x7684;&#x586B;&#x5145;&#x989C;&#x8272;&#x4F1A;&#x548C;&#x8D77;&#x59CB;&#x70B9;&#x6216;&#x7EC8;&#x70B9;&#x4E00;&#x6837;</span></span><br><span class="line">    <span class="built_in">CGContextDrawLinearGradient</span>(context, gradient, startPoint, endPoint, k<span class="built_in">CGGradientDrawsBeforeStartLocation</span> | k<span class="built_in">CGGradientDrawsAfterEndLocation</span>);</span><br><span class="line">    <span class="comment">//&#x6062;&#x590D;&#x7ED8;&#x5236;&#x524D;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x72B6;&#x6001;&#xFF0C;&#x73B0;&#x5728;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E0D;&#x662F;&#x88C1;&#x526A;&#x7684;&#x90A3;&#x5757;&#x4E86;</span></span><br><span class="line">    <span class="built_in">CGContextRestoreGState</span>(context);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGGradientRelease</span>(gradient);</span><br><span class="line">    <span class="built_in">CGColorSpaceRelease</span>(colorspace);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <ul>
-<li><strong>效果</strong></li>
+<li><strong>&#x6548;&#x679C;</strong></li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/1305321-5d92d283c15418cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2"></p>
 <ul>
-<li><strong>说明</strong></li>
+<li><strong>&#x8BF4;&#x660E;</strong></li>
 </ul>
-<p>来源于<code>iOS 编程(第四版)</code>，但是书上说，到目前为止还无法使用OC类绘制阴影和渐变。去查文档Core Graphics <code>iOS2</code>就可以用，CALayer所属的<code>QuartzCore</code>应该是<code>iOS3</code>就出来了。这本书基于<code>iOS7</code>，竟然说没有OC类可以绘制，不知道为什么？顺便提一嘴，这本书还是不错的，新手向，查漏补缺可以的，豆瓣评分挺高的，京东有售。</p>
+<p>&#x6765;&#x6E90;&#x4E8E;<code>iOS &#x7F16;&#x7A0B;(&#x7B2C;&#x56DB;&#x7248;)</code>&#xFF0C;&#x4F46;&#x662F;&#x4E66;&#x4E0A;&#x8BF4;&#xFF0C;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x8FD8;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;OC&#x7C7B;&#x7ED8;&#x5236;&#x9634;&#x5F71;&#x548C;&#x6E10;&#x53D8;&#x3002;&#x53BB;&#x67E5;&#x6587;&#x6863;Core Graphics <code>iOS2</code>&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#xFF0C;CALayer&#x6240;&#x5C5E;&#x7684;<code>QuartzCore</code>&#x5E94;&#x8BE5;&#x662F;<code>iOS3</code>&#x5C31;&#x51FA;&#x6765;&#x4E86;&#x3002;&#x8FD9;&#x672C;&#x4E66;&#x57FA;&#x4E8E;<code>iOS7</code>&#xFF0C;&#x7ADF;&#x7136;&#x8BF4;&#x6CA1;&#x6709;OC&#x7C7B;&#x53EF;&#x4EE5;&#x7ED8;&#x5236;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;&#x987A;&#x4FBF;&#x63D0;&#x4E00;&#x5634;&#xFF0C;&#x8FD9;&#x672C;&#x4E66;&#x8FD8;&#x662F;&#x4E0D;&#x9519;&#x7684;&#xFF0C;&#x65B0;&#x624B;&#x5411;&#xFF0C;&#x67E5;&#x6F0F;&#x8865;&#x7F3A;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x8C46;&#x74E3;&#x8BC4;&#x5206;&#x633A;&#x9AD8;&#x7684;&#xFF0C;&#x4EAC;&#x4E1C;&#x6709;&#x552E;&#x3002;</p>
 
       
     </div>
@@ -527,7 +497,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -544,7 +514,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
